@@ -38,20 +38,24 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 
 El modelo Windkessel representa de manera simplificada el comportamiento hemodinámico del sistema cardiovascular mediante una analogía con circuitos eléctricos. El modelo considera la impedancia característica Z, la inertancia L, la resistencia periférica R y la complianza arterial C para representar las propiedades dinámicas del sistema cardiovascular.
 
-La presión arterial Pa(t) representa la entrada del modelo y el flujo sanguíneo FL(t) junto con la presión periférica Pp(t) representan las variables asociadas con el comportamiento dinámico del sistema. La salida del modelo corresponde a la presión periférica Pp(t).
+La presión arterial Pa(t) representa la entrada del modelo y el flujo sanguíneo Fa(t) junto con la presión periférica Pp(t) representan las variables asociadas con el comportamiento dinámico del sistema. La salida del modelo corresponde a la presión periférica Pp(t).
 
-Para el análisis se consideran tres condiciones fisiológicas: normotenso, hipotenso e hipertenso. Los parámetros utilizados son:
+Para el análisis se consideran tres condiciones fisiológicas: hipotenso, normotenso e hipertenso. Los parámetros utilizados para cada condición son:
 
-- Z = 0.010
-- L = 0.001
-- R = 1.000
-- C_normo = 1.500
-- C_hipo = 3.500
-- C_hiper = 1.000
+| Parámetro | Hipotenso | Normotenso | Hipertenso |
+|---|---:|---:|---:|
+| Z | 0.010 | 0.010 | 0.010 |
+| L | 0.001 | 0.001 | 0.001 |
+| R | 1.000 | 1.000 | 1.000 |
+| C | 3.500 | 1.500 | 1.000 |
 
-A partir de estos parámetros se obtienen las funciones de transferencia correspondientes a cada condición del sistema cardiovascular.
+![Modelo Windkessel del sistema cardiovascular](biorender.png)
 
-Para los casos hipotenso e hipertenso se implementa un sistema de control en lazo cerrado tomando como referencia la respuesta del modelo normotenso, con el objetivo de disminuir el error entre la respuesta deseada y la respuesta del sistema.
+La condición normotensa se utiliza como referencia para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
+
+Para el caso hipotenso se compara la respuesta Pp_hipo(t) con Pp_normo(t), mientras que para el caso hipertenso se compara Pp_hiper(t) con Pp_normo(t). De esta manera, el controlador modifica la respuesta de cada sistema para aproximarla a la respuesta deseada correspondiente al modelo normotenso.
+
+A partir de los parámetros de cada condición se obtienen las funciones de transferencia del sistema cardiovascular y se analiza su respuesta en lazo abierto y en lazo cerrado.
 
 Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PID; Modelo matemático; Simulaciones numéricas.
 
@@ -64,7 +68,7 @@ Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PID; Mode
 6. Imagen con los parámetros del controlador.
 7. Figuras de las simulaciones en Python [.pdf].
 8. Figuras de las simulaciones en MATLAB/Simulink [.pdf].
-p. Diagrama fisiológico del sistema cardiovascular.
+9. Diagrama fisiológico del sistema cardiovascular.
    
 
 ## Referencias
