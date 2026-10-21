@@ -38,11 +38,11 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 
 El modelo Windkessel representa de manera simplificada el comportamiento hemodinámico del sistema cardiovascular mediante una analogía con circuitos eléctricos. El modelo considera la impedancia característica Z, la inertancia L, la resistencia periférica R y la complianza arterial C para representar las propiedades dinámicas del sistema cardiovascular.
 
-La impedancia característica Z representa la oposición inicial al flujo sanguíneo en las grandes arterias. La inertancia L representa la propiedad asociada con la masa de la sangre y su resistencia a cambios en el flujo. La resistencia periférica R representa la oposición al flujo sanguíneo producida principalmente por los vasos periféricos. La complianza arterial C representa la capacidad de las arterias para almacenar volumen de sangre ante cambios de presión y está relacionada con la distensibilidad arterial.
+La **impedancia característica Z** representa la oposición inicial al flujo sanguíneo en las grandes arterias. La **inertancia L** representa la propiedad asociada con la masa de la sangre y su resistencia a cambios en el flujo. La **resistencia periférica R** representa la oposición al flujo sanguíneo producida principalmente por los vasos periféricos. La **complianza arterial C** representa la capacidad de las arterias para almacenar volumen de sangre ante cambios de presión y está relacionada con la distensibilidad arterial.
 
 La presión arterial Pa(t) representa la entrada del modelo, mientras que el flujo sanguíneo Fa(t) y la presión periférica Pp(t) representan variables asociadas con el comportamiento dinámico del sistema. La salida del modelo corresponde a la presión periférica Pp(t).
 
-Para el análisis se consideran tres condiciones fisiológicas: hipotenso, normotenso e hipertenso. Los parámetros utilizados para cada condición son:
+Para el análisis se consideran tres condiciones del sistema cardiovascular. El **modelo normotenso** representa la condición de referencia, mientras que los modelos **hipotenso** e **hipertenso** representan condiciones con presión arterial inferior y superior, respectivamente, respecto a la condición normotensa. Estas condiciones se representan mediante diferentes valores de la complianza arterial C.
 
 | Parámetro | Hipotenso | Normotenso | Hipertenso |
 |---|---:|---:|---:|
@@ -53,7 +53,7 @@ Para el análisis se consideran tres condiciones fisiológicas: hipotenso, normo
 
 <img src="biorender.png" alt="Modelo Windkessel del sistema cardiovascular" width="600">
 
-La condición normotensa se utiliza como referencia para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
+La condición normotensa se utiliza como **referencia** para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
 
 Para el caso hipotenso se compara la respuesta Pp_hipo(t) con Pp_normo(t), mientras que para el caso hipertenso se compara Pp_hiper(t) con Pp_normo(t). De esta manera, el controlador modifica la respuesta de cada sistema para aproximarla a la respuesta deseada correspondiente al modelo normotenso.
 
