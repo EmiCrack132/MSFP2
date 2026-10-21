@@ -3,6 +3,7 @@
 # Práctica 5.4: Modelado y control del sistema cardiovascular mediante el modelo Windkessel
 
 ## Información de la estudiante
+
 Emiliano Gómez Quiroa; 23212196 [l23212196@tijuana.tecnm.mx]
 
 Modelado de Sistemas Fisiológicos
@@ -10,6 +11,7 @@ Modelado de Sistemas Fisiológicos
 Ingeniería Biomédica
 
 ## Docente
+
 Dr. Paul Antonio Valle Trujillo; paul.valle@tectijuana.edu.mx
 
 Departamento de Ingeniería Eléctrica y Electrónica, Tecnológico Nacional de México/IT Tijuana, Blvd. Alberto Limón Padilla s/n, Tijuana, C.P. 22454, B.C., México.
@@ -41,7 +43,7 @@ El modelo Windkessel representa de manera simplificada el comportamiento hemodin
 
 La impedancia característica Z representa la oposición inicial al flujo sanguíneo en las grandes arterias. La inertancia L representa la propiedad asociada con la masa de la sangre y su resistencia a cambios en el flujo. La resistencia periférica R representa la oposición al flujo sanguíneo producida principalmente por los vasos periféricos. La complianza arterial C representa la capacidad de las arterias para almacenar volumen de sangre ante cambios de presión y está relacionada con la distensibilidad arterial.
 
-La presión arterial Pa(t) representa la entrada del modelo, mientras que el flujo sanguíneo Fa(t) y la presión periférica Pp(t) representan variables asociadas con el comportamiento dinámico del sistema. La salida del modelo corresponde a la presión periférica Pp(t).
+La presión arterial de entrada se representa mediante P<sub>a</sub>(t), mientras que el flujo sanguíneo se representa mediante F<sub>a</sub>(t) y la presión periférica mediante P<sub>p</sub>(t). La salida del modelo corresponde a la presión periférica P<sub>p</sub>(t).
 
 Para el análisis se consideran tres condiciones del sistema cardiovascular. El modelo normotenso representa la condición de referencia, mientras que los modelos hipotenso e hipertenso representan condiciones con presión arterial inferior y superior, respectivamente, respecto a la condición normotensa. Estas condiciones se representan mediante diferentes valores de la complianza arterial C.
 
@@ -56,13 +58,14 @@ Para el análisis se consideran tres condiciones del sistema cardiovascular. El 
 
 La condición normotensa se utiliza como referencia para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
 
-Para el caso hipotenso se compara la respuesta Pp_hipo(t) con Pp_normo(t), mientras que para el caso hipertenso se compara Pp_hiper(t) con Pp_normo(t). De esta manera, el controlador modifica la respuesta de cada sistema para aproximarla a la respuesta deseada correspondiente al modelo normotenso.
+Para el caso hipotenso se compara la respuesta P<sub>p,hipo</sub>(t) con P<sub>p,normo</sub>(t), mientras que para el caso hipertenso se compara P<sub>p,hiper</sub>(t) con P<sub>p,normo</sub>(t). De esta manera, el controlador modifica la respuesta de cada sistema para aproximarla a la respuesta deseada correspondiente al modelo normotenso.
 
 A partir de los parámetros de cada condición se obtienen las funciones de transferencia del sistema cardiovascular y se analiza su respuesta en lazo abierto y en lazo cerrado.
 
 Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PID; Modelo matemático; Simulaciones numéricas.
 
 ## Lista de archivos incluidos en el repositorio
+
 1. Análisis matemático.
 2. Cuaderno computacional de MATLAB [.mlx y .pdf].
 3. Modelo de Simulink [.slx].
@@ -75,8 +78,8 @@ Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PID; Mode
 
 ## Referencias
 
-\[1] P. A. Valle, Syllabus para Modelado de Sistemas Fisiológicos, Tecnológico Nacional de México / Instituto Tecnológico de Tijuana, Tijuana, B.C., México, 2025. Permalink: https://biomath.xyz/course/
+[1] P. A. Valle, Syllabus para Modelado de Sistemas Fisiológicos, Tecnológico Nacional de México / Instituto Tecnológico de Tijuana, Tijuana, B.C., México, 2025. Permalink: https://biomath.xyz/course/
 
-\[2] M. C. Khoo, Physiological Control Systems Analysis Simulation, and Estimation, 2nd ed. Piscataway, New Jersey, USA: IEEE Press, 2018.
+[2] M. C. Khoo, Physiological Control Systems Analysis Simulation, and Estimation, 2nd ed. Piscataway, New Jersey, USA: IEEE Press, 2018.
 
-\[3] N. S. Nise, Control Systems Engineering, 8th ed. Hoboken, New Jersey, USA: John Wiley & Sons, 2020.
+[3] N. S. Nise, Control Systems Engineering, 8th ed. Hoboken, New Jersey, USA: John Wiley & Sons, 2020.
