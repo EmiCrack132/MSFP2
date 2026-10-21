@@ -23,26 +23,27 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 ## Objetivos
 
 1. Formular el modelo matemático del sistema cardiovascular mediante el modelo Windkessel.
-2. Determinar el modelo de ecuaciones diferenciales ordinarias de primer orden.
-3. Calcular la función de transferencia del sistema cardiovascular.
-4. Obtener las funciones de transferencia para los casos normotenso, hipotenso e hipertenso.
-5. Determinar los polos de los modelos y analizar su estabilidad.
-6. Analizar la respuesta de los modelos cardiovasculares en lazo abierto.
-7. Comparar la respuesta de los modelos hipotenso e hipertenso con respecto al modelo normotenso.
-8. Diseñar un sistema de control en lazo cerrado para reducir el error entre la respuesta normotensa y las respuestas hipotensa e hipertensa.
-9. Sintonizar los parámetros del controlador para los casos hipotenso e hipertenso.
-10. Obtener la respuesta en lazo abierto y en lazo cerrado mediante MATLAB/Simulink y Python.
-11. Comparar los resultados obtenidos mediante las diferentes implementaciones computacionales.
+2. Determinar el modelo de ecuaciones integro-diferenciales del sistema cardiovascular.
+3. Establecer el sistema de ecuaciones diferenciales ordinarias lineales de primer orden.
+4. Calcular la función de transferencia del sistema cardiovascular.
+5. Obtener las funciones de transferencia para los casos normotenso, hipotenso e hipertenso.
+6. Determinar los polos de los modelos y analizar su estabilidad.
+7. Analizar la respuesta de los modelos cardiovasculares en lazo abierto.
+8. Comparar la respuesta de los modelos hipotenso e hipertenso con respecto al modelo normotenso.
+9. Diseñar un sistema de control en lazo cerrado para reducir el error entre la respuesta normotensa y las respuestas hipotensa e hipertensa.
+10. Sintonizar los parámetros del controlador para los casos hipotenso e hipertenso.
+11. Obtener la respuesta en lazo abierto y en lazo cerrado mediante MATLAB/Simulink y Python.
+12. Comparar los resultados obtenidos mediante las diferentes implementaciones computacionales.
 
 ## Descripción detallada del sistema
 
 El modelo Windkessel representa de manera simplificada el comportamiento hemodinámico del sistema cardiovascular mediante una analogía con circuitos eléctricos. El modelo considera la impedancia característica Z, la inertancia L, la resistencia periférica R y la complianza arterial C para representar las propiedades dinámicas del sistema cardiovascular.
 
-La **impedancia característica Z** representa la oposición inicial al flujo sanguíneo en las grandes arterias. La **inertancia L** representa la propiedad asociada con la masa de la sangre y su resistencia a cambios en el flujo. La **resistencia periférica R** representa la oposición al flujo sanguíneo producida principalmente por los vasos periféricos. La **complianza arterial C** representa la capacidad de las arterias para almacenar volumen de sangre ante cambios de presión y está relacionada con la distensibilidad arterial.
+La impedancia característica Z representa la oposición inicial al flujo sanguíneo en las grandes arterias. La inertancia L representa la propiedad asociada con la masa de la sangre y su resistencia a cambios en el flujo. La resistencia periférica R representa la oposición al flujo sanguíneo producida principalmente por los vasos periféricos. La complianza arterial C representa la capacidad de las arterias para almacenar volumen de sangre ante cambios de presión y está relacionada con la distensibilidad arterial.
 
 La presión arterial Pa(t) representa la entrada del modelo, mientras que el flujo sanguíneo Fa(t) y la presión periférica Pp(t) representan variables asociadas con el comportamiento dinámico del sistema. La salida del modelo corresponde a la presión periférica Pp(t).
 
-Para el análisis se consideran tres condiciones del sistema cardiovascular. El **modelo normotenso** representa la condición de referencia, mientras que los modelos **hipotenso** e **hipertenso** representan condiciones con presión arterial inferior y superior, respectivamente, respecto a la condición normotensa. Estas condiciones se representan mediante diferentes valores de la complianza arterial C.
+Para el análisis se consideran tres condiciones del sistema cardiovascular. El modelo normotenso representa la condición de referencia, mientras que los modelos hipotenso e hipertenso representan condiciones con presión arterial inferior y superior, respectivamente, respecto a la condición normotensa. Estas condiciones se representan mediante diferentes valores de la complianza arterial C.
 
 | Parámetro | Hipotenso | Normotenso | Hipertenso |
 |---|---:|---:|---:|
@@ -53,7 +54,7 @@ Para el análisis se consideran tres condiciones del sistema cardiovascular. El 
 
 <img src="biorender.png" alt="Modelo Windkessel del sistema cardiovascular" width="600">
 
-La condición normotensa se utiliza como **referencia** para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
+La condición normotensa se utiliza como referencia para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
 
 Para el caso hipotenso se compara la respuesta Pp_hipo(t) con Pp_normo(t), mientras que para el caso hipertenso se compara Pp_hiper(t) con Pp_normo(t). De esta manera, el controlador modifica la respuesta de cada sistema para aproximarla a la respuesta deseada correspondiente al modelo normotenso.
 
@@ -71,7 +72,6 @@ Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PID; Mode
 7. Figuras de las simulaciones en Python [.pdf].
 8. Figuras de las simulaciones en MATLAB/Simulink [.pdf].
 9. Diagrama fisiológico del sistema cardiovascular.
-   
 
 ## Referencias
 
