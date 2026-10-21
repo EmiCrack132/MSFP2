@@ -38,7 +38,9 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 
 El modelo Windkessel representa de manera simplificada el comportamiento hemodinámico del sistema cardiovascular mediante una analogía con circuitos eléctricos. El modelo considera la impedancia característica Z, la inertancia L, la resistencia periférica R y la complianza arterial C para representar las propiedades dinámicas del sistema cardiovascular.
 
-La presión arterial Pa(t) representa la entrada del modelo y el flujo sanguíneo Fa(t) junto con la presión periférica Pp(t) representan las variables asociadas con el comportamiento dinámico del sistema. La salida del modelo corresponde a la presión periférica Pp(t).
+La impedancia característica Z representa la oposición inicial al flujo sanguíneo en las grandes arterias. La inertancia L representa la propiedad asociada con la masa de la sangre y su resistencia a cambios en el flujo. La resistencia periférica R representa la oposición al flujo sanguíneo producida principalmente por los vasos periféricos. La complianza arterial C representa la capacidad de las arterias para almacenar volumen de sangre ante cambios de presión y está relacionada con la distensibilidad arterial.
+
+La presión arterial Pa(t) representa la entrada del modelo, mientras que el flujo sanguíneo Fa(t) y la presión periférica Pp(t) representan variables asociadas con el comportamiento dinámico del sistema. La salida del modelo corresponde a la presión periférica Pp(t).
 
 Para el análisis se consideran tres condiciones fisiológicas: hipotenso, normotenso e hipertenso. Los parámetros utilizados para cada condición son:
 
