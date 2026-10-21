@@ -16,9 +16,9 @@ authors:
     affiliation: TecNM / IT Tijuana
 repository-code: 'https://github.com/EmiCrack132/MSFP2'
 keywords:
-  - Circuito RLC
-  - Controlador PID
+  - Modelo Windkessel
   - Sistema cardiovascular
+  - Controlador PID
   - Modelo matemático
   - Simulaciones numéricas
 license: BSD-2-Clause
