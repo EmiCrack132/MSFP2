@@ -49,7 +49,7 @@ Para el análisis se consideran tres condiciones fisiológicas: hipotenso, normo
 | R | 1.000 | 1.000 | 1.000 |
 | C | 3.500 | 1.500 | 1.000 |
 
-![Modelo Windkessel del sistema cardiovascular](biorender.png)
+<img src="biorender.png" alt="Modelo Windkessel del sistema cardiovascular" width="600">
 
 La condición normotensa se utiliza como referencia para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
 
