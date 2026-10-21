@@ -53,18 +53,18 @@ A partir de estos parámetros se obtienen las funciones de transferencia corresp
 
 Para los casos hipotenso e hipertenso se implementa un sistema de control en lazo cerrado tomando como referencia la respuesta del modelo normotenso, con el objetivo de disminuir el error entre la respuesta deseada y la respuesta del sistema.
 
-Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PI; Función de transferencia; Presión arterial; Modelado fisiológico; Simulaciones numéricas.
+Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PID; Modelo matemático; Simulaciones numéricas.
 
 ## Lista de archivos incluidos en el repositorio
 1. Análisis matemático.
-1. Cuaderno computacional de MATLAB [.mlx y .pdf].
-2. Modelo de Simulink [.slx].
-3. Archivo de Python [.py].
-4. Archivo con la señal de entrada utilizada en las simulaciones [.xlsx].
-5. Imagen con los parámetros del controlador.
-6. Figuras de las simulaciones en Python [.pdf].
-7. Figuras de las simulaciones en MATLAB/Simulink [.pdf].
-8. Diagrama fisiológico del sistema cardiovascular.
+2. Cuaderno computacional de MATLAB [.mlx y .pdf].
+3. Modelo de Simulink [.slx].
+4. Archivo de Python [.py].
+5. Archivo con la señal de entrada utilizada en las simulaciones [.xlsx].
+6. Imagen con los parámetros del controlador.
+7. Figuras de las simulaciones en Python [.pdf].
+8. Figuras de las simulaciones en MATLAB/Simulink [.pdf].
+p. Diagrama fisiológico del sistema cardiovascular.
    
 
 ## Referencias
