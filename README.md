@@ -58,7 +58,7 @@ Para el análisis se consideran tres condiciones del sistema cardiovascular. El 
 
 La condición normotensa se utiliza como referencia para el diseño del sistema de control. A partir de esta referencia se diseñan dos sistemas de control en lazo cerrado: uno para el caso hipotenso y otro para el caso hipertenso. El objetivo de los controladores es reducir el error entre la respuesta de cada condición y la respuesta normotensa, de manera que las respuestas de los sistemas hipotenso e hipertenso sigan la respuesta de referencia normotensa.
 
-Para el caso hipotenso se compara la respuesta P<sub>p,hipo</sub>(t) con P<sub>p,normo</sub>(t), mientras que para el caso hipertenso se compara P<sub>p,hiper</sub>(t) con P<sub>p,normo</sub>(t). De esta manera, el controlador modifica la respuesta de cada sistema para aproximarla a la respuesta deseada correspondiente al modelo normotenso.
+Para el caso hipotenso se compara la respuesta P<sub>p,hipotenso</sub>(t) con P<sub>p,normotenso</sub>(t), mientras que para el caso hipertenso se compara P<sub>p,hipertenso</sub>(t) con P<sub>p,normotenso</sub>(t). De esta manera, el controlador modifica la respuesta de cada sistema para aproximarla a la respuesta deseada correspondiente al modelo normotenso.
 
 A partir de los parámetros de cada condición se obtienen las funciones de transferencia del sistema cardiovascular y se analiza su respuesta en lazo abierto y en lazo cerrado.
 
