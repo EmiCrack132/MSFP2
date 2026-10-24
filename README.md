@@ -2,7 +2,7 @@
 
 # Práctica 2: Modelado y control del sistema cardiovascular mediante el modelo Windkessel
 
-## Información de la estudiante
+## Información del estudiante
 
 Emiliano Gómez Quiroa; 23212196 [l23212196@tijuana.tecnm.mx]
 
